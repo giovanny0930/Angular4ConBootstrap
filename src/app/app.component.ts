@@ -13,10 +13,10 @@ export class AppComponent {
   titleParqueo = 'PARQUEADERO';
 
  my_notes =[
-    {id:Date(), title: 'ngf348', description: 'Carro'},
-    {id:Date(), title: 'mgd34k', description: 'Moto'},
-    {id:Date(), title: 'lkd500', description: 'Carro'},
-    {id:Date(), title: 'dql17d', description: 'Moto'},
+    {id:Date(), title: 'ngf348', description: 'moto'},
+    {id:Date(), title: 'mgd34k', description: 'Carro'},
+    {id:Date(), title: 'lkd500', description: 'Moto'},
+    {id:Date(), title: 'dql17d', description: 'Carro'},
 
   ];
   
