@@ -1,0 +1,37 @@
+<label><h3> Listado Productos</h3></label>
+
+<body class="container"> 
+
+<table class="bordered">
+        <thead>
+          <tr>
+              <th>Producto</th>
+              <th>Distribuidor</th>
+              <th>Paquetes X Caja</th>
+              <th>Unidades X Paquete</th>
+              <th>Precio Paquete</th>
+              <th>Precio Caja</th>
+              <th>Precio Unidad</th>
+              <th>Id Producto</th>
+              <th>Categoria</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let producto of productoDataService.productoList">
+            <td>{{producto.nombreProducto}}</td>
+            <td>{{producto.distribuidor}}</td>
+            <td>{{producto.paquetesXCaja}}</td>
+            <td>{{producto.unidadesXPaquete}}</td>
+            <td>{{producto.precioPaquete}}</td>
+            <td>{{producto.precioCaja}}</td>
+            <td>{{producto.precioUnidad}}</td>
+            <td>{{producto.idProducto}}</td>
+            <td>{{producto.categoria}}</td>
+          </tr>
+          
+        </tbody>
+      </table>
+<br>
+<br>
+</body>

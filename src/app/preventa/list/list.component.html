@@ -1,0 +1,25 @@
+<label><h3> Listado Preventas</h3></label>
+<body class="container">  
+<table class="bordered">
+        <thead>
+          <tr>
+              <th>Fecha Preventa</th>
+              <th>Total Preventa</th>
+              <th>cliente</th>
+              <th>Medio de Pago</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let preventa of preventaDataService.preventaList">
+            <td>{{preventa.fechaVenta}}</td>
+            <td>{{preventa.totalVenta}}</td>
+            <td>{{preventa.cliente}}</td>
+            <td>{{preventa.medioPago}}</td>
+          </tr>
+          
+        </tbody>
+      </table>
+<br>
+<br>
+</body>

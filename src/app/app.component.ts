@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {AngularFireDatabase,FirebaseListObservable} from 'angularfire2/database-deprecated';
-import { AngularFireModule } from 'angularfire2';
+//import {AngularFireDatabase,FirebaseListObservable} from 'angularfire2/database-deprecated';
+//import { AngularFireModule } from 'angularfire2';
 //import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
@@ -8,10 +8,12 @@ import { AngularFireModule } from 'angularfire2';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-
 export class AppComponent {
-  titleParqueo = 'PARQUEADERO';
+  title = 'PARQUEADERO';
+  municipio = 'Mariquita'
+}
 
+/*
  my_notes =[
     {id:Date(), title: 'ngf348', description: 'moto'},
     {id:Date(), title: 'mgd34k', description: 'Carro'},
@@ -26,6 +28,7 @@ export class AppComponent {
     this.my_notes = afDB.list('/placa');
   }*/
 
+  /*
   note = {id:null, title:null, description:null};
   show_form = false;
   editing = false;
@@ -58,6 +61,8 @@ export class AppComponent {
    /* this.note.id =Date.now();
     this.afDB.database.ref('/placa' + this.note.id).set(this.note);
    */
+
+   /*
     if(this.editing){
       var aux = this;
      this.my_notes.forEach(function(el, i){
@@ -76,3 +81,4 @@ export class AppComponent {
     
   }
 }
+*/

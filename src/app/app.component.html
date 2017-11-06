@@ -1,8 +1,21 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
-<font face="Comic Sans MS,arial,verdana">
 <div style="text-align:center">
+    
+  <div>
+      <app-menu></app-menu>
+  </div>
   <h1>
+      Bienvenido al mini market<br> el {{title}}
+    </h1>
+    
+    <img width="300" src="/assets/imagenes/parqueadero.jpg">
+  <div>
+      <app-opcion-seleccionada></app-opcion-seleccionada>
+  </div>
+  
+</div>
+
+<!--  <h1>
     BIENVENIDO AL {{titleParqueo}}!
   </h1>
   <img width="300" src="./assets/imagenes/parqueadero.jpg">
@@ -20,7 +33,7 @@
 <div class="col-md-6" *ngIf="show_form">
   <h2>Nueva Placa</h2> 
   
-  <input class="form-control"type="text" placeholder="Numero de la placa" [(ngModel)]="note.title"/> <!-- agregamos las directivas ngmodel -->
+  <input class="form-control"type="text" placeholder="Numero de la placa" [(ngModel)]="note.title"/> <!-- agregamos las directivas ngmodel 
   <textarea class="form-control" placeholder="Tipo de Veiculo" [(ngModel)]="note.description"></textarea>
   <div class="row">
       <div class="col-md-4">
@@ -36,3 +49,7 @@
 </div>
 
 </font>
+-->
+
+  
+

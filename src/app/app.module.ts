@@ -1,32 +1,49 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule} from "@angular/forms";
 import { AppComponent } from './app.component';
-//import { AngularFireModule } from 'angularfire2';
-//import { AngularFireDatabaseModule } from 'angularfire2/database';
-//import { AngularFireAuthModule } from 'angularfire2/auth';
+import {CategoriaProductoModule} from './categoria-producto/categoria-producto.module'
+import {ClienteModule} from './cliente/cliente.module'
+import {PreventaModule}from './preventa/preventa.module'
+import {ProductoDistribuidorModule} from './producto-distribuidor/producto-distribuidor.module'
+import{UsuarioModule} from './usuario/usuario.module'
+import{VentaClienteModule} from './venta-cliente/venta-cliente.module';
+import { MenuComponent } from './menu/menu.component';
+import { OpcionSeleccionadaComponent } from './opcion-seleccionada/opcion-seleccionada.component';
+import {RouterModule,Routes} from '@angular/router';
+import {IndexComponentPreventa} from './preventa/index/index.component';
+import {IndexComponentProductoDistribuidor} from './producto-distribuidor/index/index.component';
+import{IndexComponentCategoria} from './categoria-producto/index/index.component';
+import{BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MaterializeModule } from 'angular2-materialize';
+import{FormsModule} from '@angular/forms';
 
-/*
- export const firebaseConfig = {
-  apiKey: "AIzaSyA7UIrsDcn1UPW4hKU-Sy7HXjJjMlPMhYs",
-  authDomain: "ng-parqueadero.firebaseapp.com",
-  databaseURL: "https://ng-parqueadero.firebaseio.com",
-  projectId: "ng-parqueadero",
-  storageBucket: "ng-parqueadero.appspot.com",
-  messagingSenderId: "127948342928"
-}; */
 
+
+const appRoutes:Routes = [
+  {path:"preventa/index",component:IndexComponentPreventa},
+  {path:"producto-distribuidor/index",component:IndexComponentProductoDistribuidor},
+  {path:"categoria-producto/index",component:IndexComponentCategoria},
+  
+];
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MenuComponent,
+    OpcionSeleccionadaComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-   /* AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule,
-    AngularFireAuthModule,*/
-
+    CategoriaProductoModule,
+    ClienteModule,
+    PreventaModule,
+    ProductoDistribuidorModule,
+    UsuarioModule,
+    VentaClienteModule,
+    RouterModule.forRoot(appRoutes),
+    BrowserAnimationsModule,
+    MaterializeModule,
+    FormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

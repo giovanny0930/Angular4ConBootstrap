@@ -1,0 +1,61 @@
+<html>
+  
+    
+<label><h3> Adicionar Preventas</h3></label>
+<form #addForm = "ngForm">
+    <body class="container"> 
+<div class="row">
+  <form class="col s20">
+    <div class="row">
+      <div class="input-field col s6">
+        <i class="material-icons prefix">date_range</i>
+        <input type="date" class="datepicker" [(ngModel)]="preventa.fechaVenta" 
+        name="fechaVenta" #fechaVenta="ngModel">
+        
+      </div>
+      <div class="input-field col s6">
+        <i class="material-icons prefix">attach_money</i>
+        <input id="icon_telephone" type="number" class="validate" [(ngModel)]="preventa.totalVenta" 
+        name="totalVenta" #totalVenta="ngModel">
+        <label for="icon_telephone">Ingrese total venta</label>
+      </div>
+      <div class="input-field col s6">
+        <i class="material-icons prefix">account_circle</i>
+        <input id="icon_prefix" type="text" class="validate" [(ngModel)]="preventa.cliente" 
+        name="cliente" #cliente="ngModel">
+        <label for="icon_prefix">Ingrese Nombre Cliente</label>
+      </div>
+     
+      <div class="input-field col s6">
+        <label for="icon_prefix">Seleccione Medio de Pago:</label>
+        <br>
+          <p> 
+              <input id="credito" type="radio"   [(ngModel)]="preventa.medioPago" 
+              name="medioPagoCred" #medioPagoCred="ngModel">
+              
+              <label for="credito">Credito</label>
+            </p>
+           <p>
+              <input id="contado" type="radio"   [(ngModel)]="preventa.medioPago" 
+              name="medioPagoCon" #medioPagoCon="ngModel">
+              <label for="contado">Efectivo</label>
+           </p>
+           <br>
+      </div>
+      <div class="input-field inline">
+        <button class="btn waves-effect waves-light" type="submit" name="action" (click)="onNewPreventa()">Nuevo
+          <i class="material-icons right">send</i>
+        </button>
+      </div>
+      <div class="input-field inline">
+        <button class="btn waves-effect waves-light" type="submit" name="action" 
+        (click)="onSavePreventa()">Grabar
+          <i class="material-icons right">send</i>
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+    </body>
+</form>
+</html>
